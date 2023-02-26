@@ -43,9 +43,11 @@ a{
     text-decoration: none;
 }
 .wrapper{
+    padding-top: calc(var(--header-height) + var(--wrapper-pd-top));
+}
+.wrapper section{
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: calc(var(--header-height) + var(--wrapper-pd-top));
 }
 
 /*****************************************************************/
