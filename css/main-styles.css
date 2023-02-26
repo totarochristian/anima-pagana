@@ -58,6 +58,8 @@ header nav{
     height: var(--header-height);
     box-shadow: 0 0 10px #8e3287;
     position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 /*****************************************************************/
@@ -69,4 +71,14 @@ header nav{
 }
 .image img{
     object-fit: cover;
+}
+.wave{
+    height: 100px;
+    background-color: var(--purple);
+    -webkit-mask-image: url("../assets/svg/wave.svg");
+    mask-image: url("../assets/svg/wave.svg");
+}
+.wave.rotate{
+    transform: rotate(180deg);
+    margin-top: 0;
 }
