@@ -64,5 +64,9 @@ header nav{
 /***************************** Cards *****************************/
 /*****************************************************************/
 .card{
-    width: calc(100% / var(--card-per-row));
+    width: calc(100% / var(--card-per-row) - 2rem);
+    min-width: 270px;
+}
+.image img{
+    object-fit: cover;
 }
