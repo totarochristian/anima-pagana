@@ -84,7 +84,10 @@
 .d-f-just-sp-between{
     justify-content: space-between;
 }
-.d-f-vert-align{
+.d-f-just-center{
+    justify-content: center;
+}
+.d-f-vert-align-center{
     align-items: center;
     align-content: center;
 }
