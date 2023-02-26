@@ -37,11 +37,19 @@ ul li{
 a{
     text-decoration: none;
 }
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: var(--header-height);
+}
 
 /*****************************************************************/
 /***************************** Header ****************************/
 /*****************************************************************/
 header nav{
-    background: linear-gradient(#cb2b5f, #743a87);
+    background: linear-gradient(#d90760, #8e3287);
     height: var(--header-height);
+    box-shadow: 0 0 10px #8e3287;
+    position: fixed;
 }
