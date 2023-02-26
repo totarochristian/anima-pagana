@@ -9,6 +9,7 @@
     /* Hover variables */
 
     /* Size variables */
+    --header-height: 90px;
 
     /* Transition variables */
 
@@ -36,4 +37,5 @@ html{
 /*****************************************************************/
 header nav{
     background: linear-gradient(#cb2b5f, #743a87);
+    height: var(--header-height);
 }
