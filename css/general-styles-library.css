@@ -72,6 +72,9 @@
     align-items: center;
     align-content: center;
 }
+.d-f-wrap{
+    flex-wrap: wrap;
+}
 .gap-2rem{
     gap: 2rem;
 }
