@@ -68,10 +68,13 @@ header nav{
 .card{
     width: calc(100% / var(--card-per-row) - 2rem);
     min-width: 270px;  
+    cursor: pointer;
 }
 .card:hover{
-    box-shadow: 0 0 10px var(--white);
-    cursor: pointer;
+    box-shadow: 0 0 10px var(--white); 
+}
+#speakers .card:hover{
+    box-shadow: 0 0 10px var(--purple); 
 }
 .image img{
     object-fit: cover;
