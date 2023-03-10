@@ -14,7 +14,7 @@
 
     /* Size variables */
     --fs-menu: 1.2rem;
-    --fs-h1: 3rem;
+    --fs-h1: 5rem;
     --fs-h2: 2rem;
     --hs-h3: 1.5rem;
     --fs-p: 1.1rem;
@@ -103,6 +103,9 @@
 }
 .pd-b-3rem{
     padding-bottom: 3rem;
+}
+.pd-b-6rem{
+    padding-bottom: 6rem;
 }
 
 /******************************************************************************/

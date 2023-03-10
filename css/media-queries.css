@@ -1,4 +1,7 @@
 @media screen and (max-width: 970px) {
+    :root{
+        --fs-h1: 3rem;
+    }
     #why-this-name>div{
         flex-flow: column;
         gap: 3rem;
