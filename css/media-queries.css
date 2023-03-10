@@ -58,6 +58,9 @@
         --header-height: 70px!important;
         --fs-h1: 2.5rem;
         --fs-h2: 1.3rem;
+        --hs-h3: 1.1rem;
+        --fs-p: 1rem;
+        --fs-footer: 0.8rem;
     }
     #menu-hamburger i{
         border: 2px solid var(--white);
@@ -66,5 +69,8 @@
     .sqr-size-220px{
         width: 175px;
         height: 175px;
+    }
+    footer p{
+        font-size: var(--fs-footer);
     }
 }
