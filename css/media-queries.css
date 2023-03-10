@@ -14,9 +14,38 @@
         min-height: 330px;
     }
     #menu-hamburger{
-        display: block!important;
+        display: flex!important;
     }
     #menu-links{
         display: none;
+    }
+    #hide-show-menu:hover ul{
+        padding: 0!important;
+        gap: 0;
+    }
+    #hide-show-menu:hover ul li{
+        width: 100%;
+        text-align: center;
+        border: 0;
+    }
+    #hide-show-menu:hover ul li:hover{
+        border: 0;
+        background-color: #d90760;
+    }
+    #hide-show-menu:hover ul li a{
+        width: 100%;
+        display: inline-block;
+        padding: 0.5rem;
+    }
+    #hide-show-menu:hover ul{
+        height: auto;
+        width: 100%;
+        flex-flow: column;
+        display: flex;
+        position: fixed;
+        right: 0;
+        background-color: #8e3287;
+        padding: 1rem 3rem;
+        box-shadow: 0 0 10px #8e3287;
     }
 }

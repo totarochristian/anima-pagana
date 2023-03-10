@@ -63,18 +63,19 @@ header nav{
     z-index: 1000;
     padding: 0 15px;
 }
-#menu-hamburger{
+header nav ul li{
+    border-bottom: 3px solid transparent;
+}
+header nav ul li:hover{
+    border-bottom: 3px solid white;
+}
+#menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+#menu-hamburger i{
     border: 2px solid var(--white);
     padding: 15px 16px;
-    display: none;
-}
-#hide-show-menu:hover ul{
-    flex-flow: column;
-    display: block;
-    position: fixed;
-    right: 0;
-    background-color: #8e3287;
-    padding: 1rem;
 }
 
 /*****************************************************************/
