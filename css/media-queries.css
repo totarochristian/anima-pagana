@@ -73,6 +73,8 @@
 @media screen and (max-width: 450px) {
     :root{
         --header-height: 70px!important;
+        --fs-menu: 1.3rem;
+        --fs-menu-drop: 1.1rem;
         --fs-h1: 2.5rem;
         --fs-h2: 1.3rem;
         --hs-h3: 1.1rem;
@@ -91,7 +93,7 @@
         font-size: var(--fs-footer);
     }
 }
-@media screen and (min-width: 970px){
+@media screen and (min-width: 971px){
     .dropdown-menu{
         display: none;
     }
