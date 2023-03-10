@@ -63,4 +63,8 @@
         border: 2px solid var(--white);
         padding: 10px 11px;
     }
+    .sqr-size-220px{
+        width: 175px;
+        height: 175px;
+    }
 }
