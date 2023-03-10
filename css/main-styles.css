@@ -73,10 +73,6 @@ header nav ul li:hover{
     display: none;
     cursor: pointer;
 }
-#menu-hamburger i{
-    border: 2px solid var(--white);
-    padding: 15px 16px;
-}
 
 /*****************************************************************/
 /****************************** Hero *****************************/

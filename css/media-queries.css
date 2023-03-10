@@ -16,6 +16,10 @@
     #menu-hamburger{
         display: flex!important;
     }
+    #menu-hamburger i{
+        border: 2px solid var(--white);
+        padding: 15px 16px;
+    }
     #menu-links{
         display: none;
     }
@@ -47,5 +51,16 @@
         background-color: #8e3287;
         padding: 1rem 3rem;
         box-shadow: 0 0 10px #8e3287;
+    }
+}
+@media screen and (max-width: 450px) {
+    :root{
+        --header-height: 70px!important;
+        --fs-h1: 2.5rem;
+        --fs-h2: 1.3rem;
+    }
+    #menu-hamburger i{
+        border: 2px solid var(--white);
+        padding: 10px 11px;
     }
 }
