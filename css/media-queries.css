@@ -1,6 +1,7 @@
 @media screen and (max-width: 970px) {
     :root{
         --fs-menu: 1.5rem;
+        --fs-menu-drop: 1.3rem;
         --fs-h1: 3rem;
         --fs-h2: 1.5rem;
         --hs-h3: 1.2rem;
@@ -23,25 +24,25 @@
     #menu-links{
         display: none;
     }
-    #hide-show-menu:hover ul{
+    #hide-show-menu:hover>ul{
         padding: 0!important;
         gap: 0;
     }
-    #hide-show-menu:hover ul li{
+    #hide-show-menu:hover>ul li{
         width: 100%;
         text-align: center;
         border: 0;
     }
-    #hide-show-menu:hover ul li:hover{
+    #hide-show-menu:hover>ul li:hover{
         border: 0;
         background-color: #d90760;
     }
-    #hide-show-menu:hover ul li a{
+    #hide-show-menu:hover>ul li a{
         width: 100%;
         display: inline-block;
         padding: 0.5rem;
     }
-    #hide-show-menu:hover ul{
+    #hide-show-menu:hover>ul{
         height: auto;
         width: 100%;
         flex-flow: column;
@@ -51,6 +52,22 @@
         background-color: #8e3287;
         padding: 1rem 3rem;
         box-shadow: 0 0 10px #8e3287;
+    }
+    .dropdown-menu{
+        display: none;
+    }
+    .dropdown:hover .dropdown-menu{
+        height: auto;
+        width: auto;
+        flex-flow: column;
+        display: flex;
+        flex-direction: column;
+        background-color: #bb61b2;
+        gap: 0.5rem;
+        font-size: var(--fs-menu-drop);
+    }
+    .dropdown:hover .dropdown-menu li a:hover{
+        background-color: #b644aa;
     }
 }
 @media screen and (max-width: 450px) {
@@ -72,5 +89,27 @@
     }
     footer p{
         font-size: var(--fs-footer);
+    }
+}
+@media screen and (min-width: 970px){
+    .dropdown-menu{
+        display: none;
+    }
+    .dropdown:hover .dropdown-menu{
+        height: auto;
+        width: auto;
+        flex-flow: column;
+        display: flex;
+        position: fixed;
+        top: calc(var(--header-height) - 1.65em);
+        background-color: #bb61b2;
+        box-shadow: 0 0 10px #8e3287;
+    }
+    .dropdown:hover .dropdown-menu li{
+        padding: 1rem 2rem;
+    }
+    .dropdown:hover .dropdown-menu li:hover{
+        background-color: #b644aa;
+        border: 0;
     }
 }
