@@ -14,6 +14,7 @@
 
     /* Size variables */
     --fs-menu: 1.2rem;
+    --fs-h1: 3rem;
     --fs-h2: 2rem;
     --hs-h3: 1.5rem;
     --fs-p: 1.1rem;
@@ -51,6 +52,9 @@
 /******************************************************************************/
 .fs-menu{
     font-size: var(--fs-menu);
+}
+.fs-h1{
+    font-size: var(--fs-h1);
 }
 .fs-h2{
     font-size: var(--fs-h2);
