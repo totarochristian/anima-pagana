@@ -1,0 +1,9 @@
+@media screen and (max-width: 970px) {
+    #why-this-name>div{
+        flex-flow: column;
+        gap: 3rem;
+    }
+    #traditions a{
+        min-height: 330px;
+    }
+}
