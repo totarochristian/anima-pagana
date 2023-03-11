@@ -5,6 +5,7 @@
     /* Color variables*/
     --white: #ffffff;
     --orange: #ff5500;
+    --light-orange: #fa7f42;
     --purple: #8e3286c5;
     --dark: #1e1e1e;
 
@@ -147,6 +148,9 @@
     align-items: center;
     align-content: center;
 }
+.d-f-align-stretch{
+    align-items: stretch;
+}
 .d-f-wrap{
     flex-wrap: wrap;
 }
@@ -173,6 +177,9 @@
 .txt-orange{
     color: var(--orange);
 }
+.txt-light-orange{
+    color: var(--light-orange);
+}
 
 /******************************************************************************/
 /********************************** Text **************************************/
@@ -180,6 +187,9 @@
 /******************************************************************************/
 .text-center{
     text-align: center;
+}
+.text-left{
+    text-align: left;
 }
 
 /******************************************************************************/
@@ -194,6 +204,12 @@
 }
 .bg-dark{
     background-color: var(--dark);
+}
+.bg-orange{
+    background-color: var(--orange);
+}
+.bg-light-orange{
+    background-color: var(--light-orange);
 }
 
 /******************************************************************************/
@@ -210,6 +226,9 @@
 .bdr-5px-orange{
     border: 5px solid var(--orange);
 }
+.bdr-5px-light-orange{
+    border: 5px solid var(--light-orange);
+}
 .bdr-rad-50-p{
     border-radius: 50%;
 }
@@ -218,4 +237,8 @@
 }
 .bdr-rad-15px{
     border-radius: 15px;
+}
+.bdr-rad-top-5px{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }

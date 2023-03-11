@@ -6,6 +6,7 @@
         --fs-h2: 1.5rem;
         --hs-h3: 1.2rem;
         --fs-p: 1rem;
+        --time-card-per-row: 2!important;
     }
     #why-this-name>div{
         flex-flow: column;
@@ -113,5 +114,10 @@
     .dropdown:hover .dropdown-menu li:hover{
         background-color: #b644aa;
         border: 0;
+    }
+}
+@media screen and (max-width: 712px) {
+    :root{
+        --time-card-per-row: 1!important;
     }
 }

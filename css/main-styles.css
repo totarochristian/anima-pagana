@@ -19,6 +19,7 @@
 
     /* System variables */
     --card-per-row: 3;
+    --time-card-per-row: 3;
 }
 
 /***************************************************************/
@@ -130,4 +131,19 @@ header nav ul li:hover{
 .wave.rotate{
     transform: rotate(180deg);
     margin-top: 0;
+}
+
+/*****************************************************************/
+/************************** Time cards ***************************/
+/*****************************************************************/
+.timeCard{
+    width: calc(100% / var(--time-card-per-row) - 2rem);
+    min-width: 270px;  
+    cursor: pointer;
+}
+.timeCard:hover{
+    box-shadow: 0 0 10px var(--orange); 
+}
+.timeCard article:hover{
+    box-shadow: 0 0 10px var(--light-orange); 
 }
