@@ -8,7 +8,7 @@
         --fs-p: 1rem;
         --time-card-per-row: 2!important;
     }
-    #why-this-name>div{
+    #why-this-name>div, #location>div{
         flex-flow: column;
         gap: 3rem;
     }
