@@ -63,6 +63,7 @@ header nav{
     top: 0;
     z-index: 1000;
     padding: 0 15px;
+    overflow-y: hidden;
 }
 header nav ul li{
     border-bottom: 3px solid transparent;
