@@ -254,7 +254,7 @@
     color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 15px;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
 }
 .btn-orange:hover{
     background-color: var(--orange);
