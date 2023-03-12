@@ -185,3 +185,8 @@ header nav ul li:hover{
 .paymentCard:hover section{
     background-color: var(--orange);
 }
+
+#cancellation ul li{
+    list-style: disc;
+    margin-left: 2rem;
+}
