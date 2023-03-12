@@ -20,7 +20,7 @@
     }
     #menu-hamburger i{
         border: 2px solid var(--white);
-        padding: 15px 16px;
+        padding: 12px 13px;
     }
     #menu-links{
         display: none;
@@ -73,7 +73,7 @@
 }
 @media screen and (max-width: 450px) {
     :root{
-        --header-height: 70px!important;
+        --header-height: 60px!important;
         --fs-menu: 1.3rem;
         --fs-menu-drop: 1.1rem;
         --fs-h1: 2.5rem;
@@ -104,12 +104,12 @@
         flex-flow: column;
         display: flex;
         position: fixed;
-        top: calc(var(--header-height) - 1.65em);
+        top: calc(var(--header-height) - 1.15em);
         background-color: #bb61b2;
         box-shadow: 0 0 10px #8e3287;
     }
     .dropdown:hover .dropdown-menu li{
-        padding: 1rem 2rem;
+        padding: 0.7rem 1.4rem;
     }
     .dropdown:hover .dropdown-menu li:hover{
         background-color: #b644aa;
