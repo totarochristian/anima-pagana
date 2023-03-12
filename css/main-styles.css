@@ -148,3 +148,17 @@ header nav ul li:hover{
 .timeCard article:hover{
     box-shadow: 0 0 10px var(--light-orange); 
 }
+
+/*****************************************************************/
+/************************* Ticket cards **************************/
+/*****************************************************************/
+.ticketCard{
+    max-width: 790px;
+    cursor: pointer;
+}
+.ticketCard:hover{
+    box-shadow: 0 0 10px var(--orange); 
+}
+.ticketCard article:hover{
+    box-shadow: 0 0 10px var(--light-orange); 
+}
