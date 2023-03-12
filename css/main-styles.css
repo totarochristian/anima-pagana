@@ -143,10 +143,14 @@ header nav ul li:hover{
     cursor: pointer;
 }
 .timeCard:hover{
-    box-shadow: 0 0 10px var(--orange); 
+    box-shadow: 0 0 10px var(--orange);
 }
 .timeCard article:hover{
     box-shadow: 0 0 10px var(--light-orange); 
+    border-color: var(--orange);
+}
+.timeCard article:hover section{
+    background-color: var(--orange);
 }
 
 /*****************************************************************/
@@ -161,4 +165,8 @@ header nav ul li:hover{
 }
 .ticketCard article:hover{
     box-shadow: 0 0 10px var(--light-orange); 
+    border-color: var(--orange);
+}
+.ticketCard article:hover section{
+    background-color: var(--orange);
 }
