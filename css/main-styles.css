@@ -170,3 +170,18 @@ header nav ul li:hover{
 .ticketCard article:hover section{
     background-color: var(--orange);
 }
+
+/*****************************************************************/
+/************************* Ticket cards **************************/
+/*****************************************************************/
+.paymentCard{
+    max-width: 790px;
+    cursor: pointer;
+}
+.paymentCard:hover{
+    box-shadow: 0 0 10px var(--orange); 
+    border-color: var(--orange);
+}
+.paymentCard:hover section{
+    background-color: var(--orange);
+}
