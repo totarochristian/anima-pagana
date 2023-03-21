@@ -20,4 +20,18 @@ async function LoadJsonData() {
     document.getElementById("facebook").innerText = json.facebook;
     document.getElementById("pages").innerHTML = json.pagine;
     document.getElementById("mail").innerText = json.mail;
+    UpdateLink("linkPrev",GetPrevId());
+    UpdateLink("linkNext",GetNextId());
+}
+
+function UpdateLink(elemId,speakerId,innerVal){
+    document.getElementById(elemId).href = "../pages/speaker.html?Id="+speakerId+"#speakerContent";
+}
+function GetPrevId(){
+    let tmp = GetSpeakerId();
+    return tmp-1<=0?4:tmp-1;
+}
+function GetNextId(){
+    let tmp = GetSpeakerId();
+    return tmp+1>4?1:tmp+1;
 }
