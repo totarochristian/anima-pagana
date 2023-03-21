@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External elements inclusions -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fontawesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End external elements inclusions -->
+    <link rel="stylesheet" href="../css/main-styles.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <link rel="shortcut icon" href="../assets/img/logo/logo_white.jpg" type="image/x-icon">
+    <title>Anima pagana 2023</title>
+</head>
+<body>
+    <header class="fs-menu">
+        <nav class="width-100-p ov-x-hidden d-flex d-f-just-sp-between d-f-vert-align-center">
+            <a class="height-100-p" href="../index.html">
+                <img class="height-100-p" src="../assets/img/logo/logo_gradient.jpg" alt="Logo di Anima Pagana" draggable="false">
+            </a>
+            <div id="hide-show-menu" class="height-100-p">
+                <div id="menu-hamburger" class="height-100-p d-flex d-f-just-center d-f-vert-align-center">
+                    <i class="fa-solid fa-bars txt-white fs-hamburger bdr-rad-50-p"></i>
+                </div>
+                <ul id="menu-links" class="pd-1rem d-flex d-f-just-sp-between d-f-vert-align-center gap-2rem height-100-p">
+                    <li class="dropdown">
+                        <a class="txt-white">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#why-this-name" class="txt-white">Perchè Anima Pagana?</a></li>
+                            <li><a href="../index.html#traditions" class="txt-white">Quali tradizioni potrai conoscere?</a></li>
+                            <li><a href="../index.html#speakers" class="txt-white">Quali relatori potrai incontrare?</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./plan.html#day-plan" class="txt-white">Programma</a></li>
+                    <li><a href="./location.html#location" class="txt-white">Location</a></li>
+                    <li class="dropdown">
+                        <a class="txt-white">Biglietti</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./tickets.html#costs" class="txt-white">Quanto costa un biglietto?</a></li>
+                            <li><a href="./tickets.html#payment-methods" class="txt-white">Quali metodi di pagamento accettate?</a></li>
+                            <li><a href="./tickets.html#cancellation" class="txt-white">In caso di annullamento dell'evento?</a></li>
+                            <li><a href="./tickets.html#buy-ticket" class="txt-white">Come si acquista un biglietto?</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="txt-white">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="hero mrg-b-6rem">
+                <div class="hero-background width-100-p">
+                    <img src="../assets/img/hero.jpg" alt="Hero" draggable="false">
+                </div>
+                <div class="hero-content d-flex d-f-just-center d-f-vert-align-center d-f-column txt-white">
+                    <img src="../assets/img/logo/logo_white.jpg" alt="Logo di Anima Pagana" draggable="false">
+                    <h1 class="fs-h1 pd-t-3rem">Anima Pagana</h1>
+                    <h2 class="fs-h2 pd-t-1rem">25 Giugno 2023</h2>
+                    <h2 class="fs-h2">Corte dei Brut, Gavirate (VA)</h2>
+                </div>
+            </div>
+            <div class="bg-white pd-b-6rem pd-t-6rem">
+
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark txt-white pd-2rem d-flex d-f-just-sp-between">
+        <div class="d-flex d-f-column d-f-vert-align-center gap-0_5rem">
+            <p>Seguici anche su</p>
+            <a class="fa-brands fa-facebook txt-white" href="https://www.facebook.com/profile.php?id=100089014830337" target="_blank"></a>
+        </div>
+        <div class="d-flex d-f-column d-f-vert-align-center">
+            <div class="d-flex d-f-vert-align-center gap-0_5rem">
+                <i class="fa-regular fa-copyright"></i>
+                <p>Copyright 2023</p>
+            </div>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        function GetSpeakerId(){
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            let speakerNum = parseInt(urlParams.has('speakerId') && isNaN(urlParams.has('speakerId')) ? urlParams.get('speakerId') : 1);
+            speakerNum = speakerNum <= 0 ? 1 : (speakerNum > 4 ? 4 : speakerNum);
+            return speakerNum;
+        }
+        async function printJSON() {
+            const speakerNum = GetSpeakerId();
+            const response = await fetch("../assets/speakers/sp-"+speakerNum+".json");
+            const json = await response.json();
+            console.log(json);
+            console.log(json.nome + " " + json.cognome);
+            console.log(json.presentazione);
+            console.log("Contatti\nFacebook: "+json.facebook+"\nPagine: "+json.pagine+"\nE-mail: "+json.mail)
+        }
+        printJSON();
+    </script>
+</body>
+</html>
