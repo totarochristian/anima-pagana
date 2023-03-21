@@ -197,3 +197,10 @@ header nav ul li:hover{
 #commands a:hover{
     color: var(--orange);
 }
+#contacts a{
+    color: var(--light-orange);
+    font-size: 500;
+}
+#contacts a:hover{
+    color: var(--orange);
+}

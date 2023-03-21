@@ -17,9 +17,24 @@ async function LoadJsonData() {
     document.getElementById("name").innerText = json.nome;
     document.getElementById("surname").innerText = json.cognome;
     document.getElementById("presentation").innerHTML = json.presentazione;
-    document.getElementById("facebook").innerText = json.facebook;
-    document.getElementById("pages").innerHTML = json.pagine;
-    document.getElementById("mail").innerText = json.mail;
+    if(json.facebook)
+        document.getElementById("facebook").innerHTML= json.facebook;
+    else
+        HideElementById("parFacebook");
+    if(json.instagram)
+        document.getElementById("instagram").innerHTML = json.instagram;
+    else
+        HideElementById("parInstagram");
+    if(json.pagine)
+        document.getElementById("pages").innerHTML = json.pagine;
+    else
+        HideElementById("parPages");
+    if(json.mail)
+        document.getElementById("mail").innerHTML = json.mail;
+    else
+        HideElementById("parMail");
+    if(!json.facebook && !json.pagine && !json.mail)
+        HideElementById("contacts");
     UpdateLink("linkPrev",GetPrevId());
     UpdateLink("linkNext",GetNextId());
 }
@@ -34,4 +49,7 @@ function GetPrevId(){
 function GetNextId(){
     let tmp = GetSpeakerId();
     return tmp+1>4?1:tmp+1;
+}
+function HideElementById(id){
+    document.getElementById(id).classList.add("d-none");
 }
