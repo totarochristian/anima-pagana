@@ -66,7 +66,37 @@
                 </div>
             </div>
             <div class="bg-white pd-b-6rem pd-t-6rem">
-
+                <section id="speaker" class="pd-2rem pd-t-3rem pd-b-3rem">
+                    <h2 class="fs-h2 txt-orange text-center">
+                        <span id="name"></span>
+                        <span id="surname"></span>
+                    </h2>
+                    <div class="pd-2rem pd-b-3rem d-flex d-f-just-sp-between d-f-vert-align-center d-f-wrap">
+                        <div class="width-30-p d-flex d-f-column d-f-vert-align-center gap-1rem">
+                            <div class="image sqr-size-220px ov-hidden bdr-5px-orange bdr-rad-50-p">
+                                <img id="speakerImg" class="width-100-p height-100-p" src="../assets/img/speakers/stay_tuned.gif" alt="Logo Anima Pagana con sfondo bianco" draggable="false">
+                            </div>
+                            <div id="contacts">
+                                <h3 class="fs-h3 txt-orange text-center">Contatti</h3>
+                                <p class="fs-p d-flex d-f-column pd-b-0_6rem">
+                                    <span class="fw-semibold">Facebook</span>
+                                    <span id="facebook"></span>
+                                </p>
+                                <p class="fs-p d-flex d-f-column pd-b-0_6rem">
+                                    <span class="fw-semibold">Pagine</span>
+                                    <span id="pages"></span>
+                                </p>
+                                <p class="fs-p d-flex d-f-column">
+                                    <span class="fw-semibold">E-mail</span>
+                                    <span id="mail"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="width-70-p d-flex d-f-column gap-1rem pd-2rem">
+                            <p id="presentation" class="fs-p"></p>
+                        </div> 
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -99,10 +129,13 @@
             const speakerNum = GetSpeakerId();
             const response = await fetch("../assets/speakers/sp-"+speakerNum+".json");
             const json = await response.json();
-            console.log(json);
-            console.log(json.nome + " " + json.cognome);
-            console.log(json.presentazione);
-            console.log("Contatti\nFacebook: "+json.facebook+"\nPagine: "+json.pagine+"\nE-mail: "+json.mail)
+            document.getElementById("speakerImg").setAttribute("src","../assets/img/speakers/speaker_"+speakerNum+".jpg");
+            document.getElementById("name").innerText = json.nome;
+            document.getElementById("surname").innerText = json.cognome;
+            document.getElementById("presentation").innerText = json.presentazione;
+            document.getElementById("facebook").innerText = json.facebook;
+            document.getElementById("pages").innerText = json.pagine;
+            document.getElementById("mail").innerText = json.mail;
         }
         printJSON();
     </script>
