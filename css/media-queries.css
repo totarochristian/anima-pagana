@@ -8,17 +8,17 @@
         --fs-p: 1rem;
         --time-card-per-row: 2!important;
     }
-    #why-this-name>div, #location>div, #speaker>div{
+    #why-this-name>div, #location>div, #speakerContent>div{
         flex-flow: column;
         gap: 3rem;
     }
-    #speaker>div #contacts{
+    #speakerContent>div #contacts{
         margin-top: 0.5rem;
     }
-    #speaker>div>div{
+    #speakerContent>div>div{
         width: 100%;
     }
-    #speaker>div #presentation{
+    #why-this-name>div div:last-child, #location>div div:last-child, #speakerContent>div #presentation{
         width: 100%;
         text-align: justify;
         padding: 0;
