@@ -84,7 +84,7 @@
                                 </p>
                                 <p class="fs-p d-flex d-f-column pd-b-0_6rem">
                                     <span class="fw-semibold">Pagine</span>
-                                    <span id="pages"></span>
+                                    <span id="pages" class="d-flex gap-0_5rem d-f-column"></span>
                                 </p>
                                 <p class="fs-p d-flex d-f-column">
                                     <span class="fw-semibold">E-mail</span>
@@ -92,8 +92,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="width-70-p d-flex d-f-column gap-1rem pd-2rem">
-                            <p id="presentation" class="fs-p"></p>
+                        <div id="presentation" class="width-70-p d-flex d-f-column gap-1rem pd-2rem">
+
                         </div> 
                     </div>
                 </section>
@@ -132,9 +132,9 @@
             document.getElementById("speakerImg").setAttribute("src","../assets/img/speakers/speaker_"+speakerNum+".jpg");
             document.getElementById("name").innerText = json.nome;
             document.getElementById("surname").innerText = json.cognome;
-            document.getElementById("presentation").innerText = json.presentazione;
+            document.getElementById("presentation").innerHTML = json.presentazione;
             document.getElementById("facebook").innerText = json.facebook;
-            document.getElementById("pages").innerText = json.pagine;
+            document.getElementById("pages").innerHTML = json.pagine;
             document.getElementById("mail").innerText = json.mail;
         }
         printJSON();

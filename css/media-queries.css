@@ -8,9 +8,20 @@
         --fs-p: 1rem;
         --time-card-per-row: 2!important;
     }
-    #why-this-name>div, #location>div{
+    #why-this-name>div, #location>div, #speaker>div{
         flex-flow: column;
         gap: 3rem;
+    }
+    #speaker>div #contacts{
+        margin-top: 0.5rem;
+    }
+    #speaker>div>div{
+        width: 100%;
+    }
+    #speaker>div #presentation{
+        width: 100%;
+        text-align: justify;
+        padding: 0;
     }
     #traditions a{
         min-height: 330px;
