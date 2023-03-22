@@ -111,11 +111,11 @@
     }
     #buy-ticket>div,#contacts>div{
         gap: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     #buy-ticket>div>div>section h2,#contacts>div>div>section h2{
         padding: 0 0 1rem 0;
-    }
-    #contacts>div>div>section h2{
         text-align: center;
     }
     #commands a{
