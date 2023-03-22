@@ -115,6 +115,9 @@
     #buy-ticket>div>div>section h2,#contacts>div>div>section h2{
         padding: 0 0 1rem 0;
     }
+    #contacts>div>div>section h2{
+        text-align: center;
+    }
     #commands a{
         font-size: var(--fs-h1);
     }
