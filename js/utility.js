@@ -1,3 +1,5 @@
+const maxIdSpeaker = 5;
+
 function GetSpeakerId(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -6,7 +8,7 @@ function GetSpeakerId(){
     //If in the url there is the speakerId param and the value is a number, use the tmpSpId defined previously, otherwise set 1.
     let speakerNum = urlParams.has('Id') && !isNaN(tmpSpId) ? tmpSpId : 1;
     //Check upper and down limits on the speaker id
-    speakerNum = speakerNum <= 0 ? 1 : (speakerNum > 4 ? 4 : speakerNum);
+    speakerNum = speakerNum <= 0 ? 1 : (speakerNum > maxIdSpeaker ? maxIdSpeaker : speakerNum);
     return speakerNum;
 }
 async function LoadJsonData() {
@@ -40,11 +42,11 @@ function UpdateLink(elemId,speakerId,innerVal){
 }
 function GetPrevId(){
     let tmp = GetSpeakerId();
-    return tmp-1<=0?4:tmp-1;
+    return tmp-1<=0?maxIdSpeaker:tmp-1;
 }
 function GetNextId(){
     let tmp = GetSpeakerId();
-    return tmp+1>4?1:tmp+1;
+    return tmp+1>maxIdSpeaker?1:tmp+1;
 }
 function HideElementById(id){
     document.getElementById(id).classList.add("d-none");
