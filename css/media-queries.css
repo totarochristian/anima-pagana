@@ -106,13 +106,13 @@
     footer p{
         font-size: var(--fs-footer);
     }
-    #buy-ticket>div>div{
+    #buy-ticket>div>div,#contacts>div>div{
         flex-direction: column;
     }
-    #buy-ticket>div{
+    #buy-ticket>div,#contacts>div{
         gap: 4rem;
     }
-    #buy-ticket>div>div>section h2{
+    #buy-ticket>div>div>section h2,#contacts>div>div>section h2{
         padding: 0 0 1rem 0;
     }
     #commands a{
