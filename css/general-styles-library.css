@@ -18,7 +18,8 @@
     --fs-menu: 1.2rem;
     --fs-h1: 5rem;
     --fs-h2: 2rem;
-    --hs-h3: 1.5rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.3rem;
     --fs-p: 1.1rem;
 
     /* Transition variables */
@@ -78,7 +79,10 @@
     font-size: var(--fs-h2);
 }
 .fs-h3{
-    font-size: var(--hs-h3);
+    font-size: var(--fs-h3);
+}
+.fs-h4{
+    font-size: var(--fs-h4);
 }
 .fs-p{
     font-size: var(--fs-p);

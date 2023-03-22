@@ -4,7 +4,8 @@
         --fs-menu-drop: 1.3rem;
         --fs-h1: 3rem;
         --fs-h2: 1.5rem;
-        --hs-h3: 1.2rem;
+        --fs-h3: 1.2rem;
+        --fs-h4: 1.1rem;
         --fs-p: 1rem;
         --time-card-per-row: 2!important;
     }
@@ -89,8 +90,9 @@
         --fs-menu-drop: 1.1rem;
         --fs-h1: 2.5rem;
         --fs-h2: 1.3rem;
-        --hs-h3: 1.1rem;
-        --fs-p: 1rem;
+        --fs-h3: 1.1rem;
+        --fs-h4: 1rem;
+        --fs-p: 0.9rem;
         --fs-footer: 0.8rem;
     }
     #menu-hamburger i{

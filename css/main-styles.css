@@ -204,3 +204,13 @@ header nav ul li:hover{
 #contacts a:hover{
     color: var(--orange);
 }
+
+/*****************************************************************/
+/**************************** Footer *****************************/
+/*****************************************************************/
+footer>div:last-child a:hover{
+    color: var(--orange);
+}
+footer>div:first-child a:hover{
+    text-decoration: underline;
+}
