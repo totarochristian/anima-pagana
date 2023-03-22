@@ -161,6 +161,12 @@
     <script>
         LoadJsonData();
     </script>
+    <!-- Force the HTTPS protocol -->
+    <script>
+        if (location.protocol !== 'https:') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
     <!-- Includes IUBENDA Banner -->
     <script type="text/javascript">
         var _iub = _iub || [];

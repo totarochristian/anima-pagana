@@ -284,6 +284,12 @@
             <p class="fs-p">All rights reserved</p>
         </div>
     </footer>
+    <!-- Force the HTTPS protocol -->
+    <script>
+        if (location.protocol !== 'https:') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
     <!-- Includes IUBENDA Banner -->
     <script type="text/javascript">
         var _iub = _iub || [];
