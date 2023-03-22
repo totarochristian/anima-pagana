@@ -17,28 +17,24 @@ async function LoadJsonData() {
     document.getElementById("name").innerText = json.nome;
     document.getElementById("surname").innerText = json.cognome;
     document.getElementById("presentation").innerHTML = json.presentazione;
-    if(json.facebook)
-        document.getElementById("facebook").innerHTML= json.facebook;
-    else
-        HideElementById("parFacebook");
-    if(json.instagram)
-        document.getElementById("instagram").innerHTML = json.instagram;
-    else
-        HideElementById("parInstagram");
-    if(json.pagine)
-        document.getElementById("pages").innerHTML = json.pagine;
-    else
-        HideElementById("parPages");
-    if(json.mail)
-        document.getElementById("mail").innerHTML = json.mail;
-    else
-        HideElementById("parMail");
+
+    CheckValueAndSetOrHideElementById(json.facebook,"facebook","parFacebook");
+    CheckValueAndSetOrHideElementById(json.instagram,"instagram","parInstagram");
+    CheckValueAndSetOrHideElementById(json.pagine,"pages","parPages");
+    CheckValueAndSetOrHideElementById(json.mail,"mail","parMail");
+
     if(!json.facebook && !json.pagine && !json.mail)
         HideElementById("contacts");
+        
     UpdateLink("linkPrev",GetPrevId());
     UpdateLink("linkNext",GetNextId());
 }
-
+function CheckValueAndSetOrHideElementById(value,elemIdToSet,elemIdToHide){
+    if(value)
+        document.getElementById(elemIdToSet).innerHTML = value;
+    else
+        HideElementById(elemIdToHide);
+}
 function UpdateLink(elemId,speakerId,innerVal){
     document.getElementById(elemId).href = "../pages/speaker.html?Id="+speakerId+"#speakerContent";
 }
