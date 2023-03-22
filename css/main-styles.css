@@ -214,3 +214,11 @@ footer>div:last-child a:hover{
 footer>div:first-child a:hover{
     text-decoration: underline;
 }
+#cookieTermini a{
+    background-color: white!important;
+    filter: brightness(90%);
+}
+#cookieTermini a:hover{
+    background-color: white!important;
+    filter: brightness(100%);
+}
