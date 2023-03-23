@@ -212,7 +212,7 @@ header nav ul li:hover{
     width: calc(100% / 2 - 1rem);
 }
 #sponsors a:hover{
-    box-shadow: 0 0 10px var(--dark);
+    box-shadow: 0 0 10px #888;
 }
 
 /*****************************************************************/
