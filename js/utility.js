@@ -1,4 +1,4 @@
-const maxIdSpeaker = 4;
+const maxIdSpeaker = 5;
 
 function GetSpeakerId(){
     const queryString = window.location.search;
