@@ -22,6 +22,7 @@ async function LoadJsonData() {
 
     CheckValueAndSetOrHideElementById(json.facebook,"facebook","parFacebook");
     CheckValueAndSetOrHideElementById(json.instagram,"instagram","parInstagram");
+    CheckValueAndSetOrHideElementById(json.youtube,"youtube","parYoutube");
     CheckValueAndSetOrHideElementById(json.pagine,"pages","parPages");
     CheckValueAndSetOrHideElementById(json.mail,"mail","parMail");
 
