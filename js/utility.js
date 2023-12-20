@@ -25,6 +25,7 @@ async function LoadJsonData() {
     CheckValueAndSetOrHideElementById(json.youtube,"youtube","parYoutube");
     CheckValueAndSetOrHideElementById(json.pagine,"pages","parPages");
     CheckValueAndSetOrHideElementById(json.mail,"mail","parMail");
+    CheckValueAndSetOrHideElementById(json.edizione2023,"previousEditionContent","previousEditionParagraph");
 
     if(!json.facebook && !json.pagine && !json.mail)
         HideElementById("contacts");
