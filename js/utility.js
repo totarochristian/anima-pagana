@@ -1,4 +1,4 @@
-const maxIdSpeaker = 7;
+const maxIdSpeaker = 5;
 
 function GetSpeakerId(){
     const queryString = window.location.search;
@@ -11,11 +11,16 @@ function GetSpeakerId(){
     speakerNum = speakerNum <= 0 ? 1 : (speakerNum > maxIdSpeaker ? maxIdSpeaker : speakerNum);
     return speakerNum;
 }
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
 async function LoadJsonData() {
     const speakerNum = GetSpeakerId();
     const response = await fetch("../assets/speakers/sp-"+speakerNum+".json");
     const json = await response.json();
-    document.getElementById("speakerImg").setAttribute("src","../assets/img/speakers/speaker_"+speakerNum+".jpg");
+    document.getElementById("speakerImg").setAttribute("src","../assets/img/speakers/speaker_"+speakerNum+".jpg?"+getRandomInt(1000,10000));
     document.getElementById("name").innerText = json.nome;
     document.getElementById("surname").innerText = json.cognome;
     document.getElementById("presentation").innerHTML = json.presentazione;
